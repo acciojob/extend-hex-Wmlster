@@ -5,6 +5,16 @@ const extendHex = (shortHex) => {
 
 	for(let i=0;i<shortHex.length;i++)
 		{
+			if(shortHex[i]=='#')
+			{
+				continue;
+			} 
+
+			if(i>0&shortHex[i]==shortHex[i-1])
+			{
+				continue;
+			}
+			
 			s+=shortHex[i]+shortHex[i];
 		}
 
